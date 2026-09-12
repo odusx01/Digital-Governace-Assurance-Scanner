@@ -1948,7 +1948,7 @@ function layout(title, body, extraHead = '', user) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} — SPIDAC</title>
+<title>${esc(title)} — ConsentLens</title>
 <style>${SHARED_CSS}</style>
 ${extraHead}
 </head>
@@ -1992,7 +1992,7 @@ function appLayout(title, body, user, currentPage = 'dashboard', extraHead = '')
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} — SPIDAC</title>
+<title>${esc(title)} — ConsentLens</title>
 <style>${SHARED_CSS}</style>
 ${extraHead}
 </head>
@@ -2000,9 +2000,9 @@ ${extraHead}
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="app-shell">
   <aside class="app-sidebar" id="app-sidebar" aria-label="Sidebar">
-    <a href="/app" class="app-sidebar-brand" aria-label="SPIDAC home">
+    <a href="/app" class="app-sidebar-brand" aria-label="ConsentLens home">
       <span class="app-sidebar-brand-mark" aria-hidden="true">&#128737;</span>
-      <span class="app-sidebar-brand-text">SPIDAC</span>
+      <span class="app-sidebar-brand-text">ConsentLens</span>
     </a>
     <nav class="app-sidebar-nav" aria-label="App">
       ${sidebarLinks}
@@ -2040,7 +2040,7 @@ ${extraHead}
   </main>
   <footer class="app-footer">
     <div style="max-width:var(--inner);margin:0 auto;padding:0 var(--gutter);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <span>&copy; ${new Date().getFullYear()} SPIDAC - Digital Tech Assurance</span>
+      <span>&copy; ${new Date().getFullYear()} ConsentLens</span>
       <span></span>
     </div>
   </footer>
@@ -2960,7 +2960,7 @@ function mpNav(activePage) {
     <div class="mp-inner mp-nav-inner">
       <a class="mp-nav-logo" href="/">
         <span class="mp-nav-logo-mark">🛡</span>
-        SPIDAC
+        ConsentLens
       </a>
       <div class="mp-nav-links">
         ${links.map(l => `<a class="mp-nav-link${l.key === activePage ? ' mp-nav-link--active' : ''}" href="${l.href}">${l.label}</a>`).join('\n        ')}
@@ -2980,7 +2980,7 @@ function mpFooter() {
         <div class="mp-footer-brand">
           <a class="mp-footer-logo" href="/">
             <span style="width:28px;height:28px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:7px;display:grid;place-items:center;font-size:13px;flex-shrink:0">🛡</span>
-            SPIDAC
+            ConsentLens
           </a>
           <p>Evidence-led privacy assurance for websites. Test consent, track remediation, prove improvement.</p>
         </div>
@@ -3013,7 +3013,7 @@ function mpFooter() {
         </div>
       </div>
       <div class="mp-footer-bottom">
-        <span>© ${new Date().getFullYear()} SPIDAC - Digital Tech Assurance. All rights reserved.</span>
+        <span>© ${new Date().getFullYear()} ConsentLens. All rights reserved.</span>
         <div class="mp-footer-legal">
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
@@ -3102,7 +3102,7 @@ function toggleFaq(btn){var item=btn.closest('.mp-faq-item');var isOpen=item.cla
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)} | SPIDAC</title>
+<title>${esc(title)} | ConsentLens</title>
 <meta name="description" content="${esc(description)}">
 <style>${sharedCss}${extraCss}</style>
 </head>
@@ -3328,7 +3328,7 @@ function marketingPage() {
       <div>
         <div class="mp-hero-eyebrow">Privacy assurance platform</div>
         <h1 id="hero-heading">Know what your consent experience <em>actually does</em></h1>
-        <p class="mp-hero-sub">SPIDAC simulates real visitor journeys: before consent, after accept, after reject. See exactly what fires, what persists, and what needs fixing. Evidence-led, not an automated certification.</p>
+        <p class="mp-hero-sub">ConsentLens simulates real visitor journeys: before consent, after accept, after reject. See exactly what fires, what persists, and what needs fixing. Evidence-led, not an automated certification.</p>
         <div class="mp-hero-actions">
           <a class="mp-btn-primary" href="/register">Start free, no credit card</a>
           <a class="mp-btn-secondary" href="#how-it-works">See how it works</a>
@@ -3662,7 +3662,7 @@ function marketingPage() {
           </div>
         </article>
         <article class="mp-testimonial mp-reveal">
-          <p class="mp-testimonial-quote">We run SPIDAC scans before every client site launch. The remediation tracking means nothing falls through the cracks between our devs and the client's DPO.</p>
+          <p class="mp-testimonial-quote">We run ConsentLens scans before every client site launch. The remediation tracking means nothing falls through the cracks between our devs and the client's DPO.</p>
           <div class="mp-testimonial-author">
             <div class="mp-testimonial-avatar">A</div>
             <div>
@@ -3757,8 +3757,8 @@ function marketingPage() {
       </div>
       <div class="mp-faq" role="list">
         <div class="mp-faq-item" role="listitem">
-          <button class="mp-faq-q" onclick="toggleFaq(this)">Does SPIDAC replace a legal opinion or formal GDPR audit?</button>
-          <div class="mp-faq-a">No. SPIDAC produces technical observations (what the browser actually did) and risk interpretation based on your selected framework. It explicitly distinguishes these from legal conclusions. A qualified DPO or solicitor should interpret results in your specific legal context.</div>
+          <button class="mp-faq-q" onclick="toggleFaq(this)">Does ConsentLens replace a legal opinion or formal GDPR audit?</button>
+          <div class="mp-faq-a">No. ConsentLens produces technical observations (what the browser actually did) and risk interpretation based on your selected framework. It explicitly distinguishes these from legal conclusions. A qualified DPO or solicitor should interpret results in your specific legal context.</div>
         </div>
         <div class="mp-faq-item" role="listitem">
           <button class="mp-faq-q" onclick="toggleFaq(this)">What frameworks are supported?</button>
@@ -3766,7 +3766,7 @@ function marketingPage() {
         </div>
         <div class="mp-faq-item" role="listitem">
           <button class="mp-faq-q" onclick="toggleFaq(this)">How do the consent journeys work?</button>
-          <div class="mp-faq-a">SPIDAC opens a real browser (Playwright/Chromium) and simulates visitor actions: doing nothing, clicking accept-all, clicking reject-all, opening preferences, withdrawing consent, and revisiting after a previous consent session. Each journey captures cookies, storage, network requests, and consent signals independently.</div>
+          <div class="mp-faq-a">ConsentLens opens a real browser (Playwright/Chromium) and simulates visitor actions: doing nothing, clicking accept-all, clicking reject-all, opening preferences, withdrawing consent, and revisiting after a previous consent session. Each journey captures cookies, storage, network requests, and consent signals independently.</div>
         </div>
         <div class="mp-faq-item" role="listitem">
           <button class="mp-faq-q" onclick="toggleFaq(this)">Can I build custom consent journeys?</button>
@@ -3777,8 +3777,8 @@ function marketingPage() {
           <div class="mp-faq-a">All scans are stored in your private workspace. Reports are not publicly accessible unless you explicitly create a timed shared link. You can delete scans at any time, and evidence packages can be exported and removed from the platform.</div>
         </div>
         <div class="mp-faq-item" role="listitem">
-          <button class="mp-faq-q" onclick="toggleFaq(this)">Does SPIDAC work with all CMPs?</button>
-          <div class="mp-faq-a">SPIDAC works with any website, regardless of which CMP (or none) is in use. It observes actual browser behaviour rather than integrating with CMP APIs, so the results reflect what a real visitor experiences, not what the CMP reports about itself.</div>
+          <button class="mp-faq-q" onclick="toggleFaq(this)">Does ConsentLens work with all CMPs?</button>
+          <div class="mp-faq-a">ConsentLens works with any website, regardless of which CMP (or none) is in use. It observes actual browser behaviour rather than integrating with CMP APIs, so the results reflect what a real visitor experiences, not what the CMP reports about itself.</div>
         </div>
       </div>
     </div>
@@ -3809,7 +3809,7 @@ function marketingPage() {
 })();
 </script>`;
 
-  return mpShell('Privacy assurance platform', 'SPIDAC simulates real visitor consent journeys and surfaces what fires, what persists, and what to fix. Evidence-led privacy assurance for websites.', body + statScript, 'home', css);
+  return mpShell('Privacy assurance platform', 'ConsentLens simulates real visitor consent journeys and surfaces what fires, what persists, and what to fix. Evidence-led privacy assurance for websites.', body + statScript, 'home', css);
 }
 
 function marketingSubpage(title, eyebrow, heading, intro, content, currentPage) {
@@ -3851,7 +3851,7 @@ function trainingsPage() {
   <article class="sp-card mp-reveal"><span class="sp-eyebrow">Implementation</span><h2>Consent controls in production</h2><p>Map vendors to categories, gate scripts correctly, test withdrawal, and build a repeatable release-check process.</p><span class="sp-meta">Hands-on lab · Technical teams</span></article>
   <article class="sp-card mp-reveal"><span class="sp-eyebrow">Operations</span><h2>Evidence-led privacy reviews</h2><p>Read scan results, separate critical issues from advisories, assign remediation, and communicate findings clearly.</p><span class="sp-meta">Team session · Privacy operations</span></article>
 </div>
-<div class="sp-note" style="margin-top:32px"><strong>Training programme coming soon.</strong> Join the SPIDAC workspace to receive updates about live workshops, private team sessions, and practical privacy-tech labs.</div>`;
+<div class="sp-note" style="margin-top:32px"><strong>Training programme coming soon.</strong> Join the ConsentLens workspace to receive updates about live workshops, private team sessions, and practical privacy-tech labs.</div>`;
   return marketingSubpage('Privacy technology training', 'Trainings', 'Make privacy technology understandable and operational.', 'Practical sessions for privacy, engineering, product, and compliance teams who need to make consent systems work in the real world.', content, 'trainings');
 }
 
@@ -3865,7 +3865,7 @@ function blogPage(posts = [], article = null) {
 .blog-back:hover{color:#4f46e5}` : '';
 
   if (article) {
-    const articleContent = `<article class="blog-article"><a class="blog-back" href="/blog">&#8592; Back to Blog</a><span class="sp-eyebrow">${esc(article.category)}</span><h2>${esc(article.title)}</h2><div class="article-meta">By ${esc(article.author_email || 'SPIDAC')} &middot; ${esc(new Date(article.published_at || article.created_at).toLocaleDateString('en-GB'))}</div><div class="blog-article-body">${esc(article.body)}</div></article>`;
+    const articleContent = `<article class="blog-article"><a class="blog-back" href="/blog">&#8592; Back to Blog</a><span class="sp-eyebrow">${esc(article.category)}</span><h2>${esc(article.title)}</h2><div class="article-meta">By ${esc(article.author_email || 'ConsentLens')} &middot; ${esc(new Date(article.published_at || article.created_at).toLocaleDateString('en-GB'))}</div><div class="blog-article-body">${esc(article.body)}</div></article>`;
     return marketingSubpage(article.title, 'Blog & news', article.title, article.excerpt || '', articleContent, 'blog');
   }
 
@@ -3873,7 +3873,7 @@ function blogPage(posts = [], article = null) {
     ? posts.map(post => `<article class="sp-card mp-reveal"><span class="sp-eyebrow">${esc(post.category)}</span><h2>${esc(post.title)}</h2><p>${esc(post.excerpt)}</p><a class="sp-meta" href="/blog/${encodeURIComponent(post.slug)}">Read article</a></article>`).join('')
     : '<div class="sp-note"><strong>No published posts yet.</strong> Check back soon for product updates, privacy engineering guidance, and lessons from testing consent experiences.</div>\n';
   const content = posts.length ? `<div class="sp-grid">${cards}</div>` : cards;
-  return marketingSubpage('SPIDAC Blog', 'Blog & news', 'Practical notes for people building privacy into the web.', 'Product updates, privacy technology guidance, and clear explanations of what consent systems actually do.', content + (articleCss ? `<style>${articleCss}</style>` : ''), 'blog');
+  return marketingSubpage('ConsentLens Blog', 'Blog & news', 'Practical notes for people building privacy into the web.', 'Product updates, privacy technology guidance, and clear explanations of what consent systems actually do.', content + (articleCss ? `<style>${articleCss}</style>` : ''), 'blog');
 }
 
 function dashboardTrendChart(pastScans) {
@@ -4020,7 +4020,7 @@ function homePage(pastScans, activeJobs = [], user = null, comparisons = [], mon
     <section class="workflow-guide" aria-labelledby="workflow-guide-title">
       <div class="workflow-guide-head">
         <div>
-          <h2 class="workflow-guide-title" id="workflow-guide-title">${user ? 'Your first scan, in three simple steps' : 'How SPIDAC - Digital Tech Assurance works'}</h2>
+          <h2 class="workflow-guide-title" id="workflow-guide-title">${user ? 'Your first scan, in three simple steps' : 'How ConsentLens works'}</h2>
           <p class="workflow-guide-sub">Choose the visitor context you want to test, then get a private evidence trail for review.</p>
         </div>
       </div>
@@ -5179,7 +5179,7 @@ function monitorFormPage(monitor, user) {
         <input class="name-input" id="m-webhook" type="url" placeholder="https://hooks.example.com/notify" value="${esc(monitor?.webhook_url || '')}" style="flex:1">
         <button type="button" class="wizard-btn" id="m-webhook-test" style="white-space:nowrap;flex-shrink:0" onclick="testWebhook()">Test</button>
       </div>
-      <p class="form-hint">SPIDAC will POST a JSON payload to this URL on every monitor run. Useful for Slack, Teams, or custom integrations. Payload includes: <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">event</code>, <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">monitor</code> (id, name, url), <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">run</code> (status, criticalCount, highCount, runAt), <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">reportUrl</code>.</p>
+      <p class="form-hint">ConsentLens will POST a JSON payload to this URL on every monitor run. Useful for Slack, Teams, or custom integrations. Payload includes: <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">event</code>, <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">monitor</code> (id, name, url), <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">run</code> (status, criticalCount, highCount, runAt), <code style="font-size:0.78rem;background:var(--surface-2);padding:1px 4px;border-radius:3px">reportUrl</code>.</p>
       <div id="m-webhook-result" style="display:none;margin-top:6px;font-size:0.82rem;padding:6px 10px;border-radius:var(--radius-sm)"></div>
     </div>
   </div>

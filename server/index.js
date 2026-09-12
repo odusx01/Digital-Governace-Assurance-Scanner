@@ -742,11 +742,11 @@ app.get('/api/scans/:scanId/export', requireAuth, async (req, res) => {
   const remediations = await getFindingRemediations(scanId);
   const domain = (() => { try { return new URL(scan.url).hostname.replace(/^www\./, ''); } catch (_) { return scan.url; } })();
   const datePart = new Date(scan.scanned_at).toISOString().slice(0, 10);
-  const filename = `spidac-evidence-${domain}-${datePart}.json`;
+  const filename = `consentlens-evidence-${domain}-${datePart}.json`;
   const bundle = {
     exportedAt: new Date().toISOString(),
     exportedBy: account?.email || '',
-    product: 'SPIDAC - Digital Tech Assurance',
+    product: 'ConsentLens',
     scan: {
       id: scan.id,
       url: scan.url,
@@ -1050,7 +1050,7 @@ app.patch('/api/monitors/:id/enabled', requireAuth, async (req, res) => {
   const { start: startScheduler } = require('./scheduler');
 
   app.listen(PORT, '127.0.0.1', () => {
-    console.log(`\nSPIDAC - Digital Tech Assurance`);
+    console.log(`\nConsentLens`);
     console.log(`Local UI:  http://localhost:${PORT}`);
     console.log(`Results:   ${RESULTS_DIR}`);
     console.log(`\nPress Ctrl+C to stop.\n`);

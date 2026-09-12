@@ -2928,7 +2928,7 @@ function renderNav(data) {
 <nav>
   <a href="/app" style="display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:15px;text-decoration:none;letter-spacing:-0.02em;flex-shrink:0">
     <span style="width:32px;height:32px;background:linear-gradient(135deg,#6366f1,#8b5cf6);border-radius:9px;display:grid;place-items:center;font-size:15px;flex-shrink:0;box-shadow:0 2px 12px rgba(99,102,241,0.4)">🛡</span>
-     SPIDAC
+     ConsentLens
   </a>
   <span class="nav-title">Compliance report</span>
   <div class="nav-actions">
@@ -3021,7 +3021,7 @@ ${renderSummary(data)}
   ${renderFooter(data)}
 </div>
 <footer class="global-footer">
-  SPIDAC - Digital Tech Assurance &mdash; Local compliance testing tool &mdash; <em>Not legal advice.</em>
+  ConsentLens &mdash; Local compliance testing tool &mdash; <em>Not legal advice.</em>
 </footer>
 <script>
 function getFindingFilters() {

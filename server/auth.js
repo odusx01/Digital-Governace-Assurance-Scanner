@@ -3,7 +3,7 @@
 const bcrypt = require('bcryptjs');
 const session = require('express-session');
 
-const SESSION_SECRET = process.env.SESSION_SECRET || 'spidac-dta-dev-secret';
+const SESSION_SECRET = process.env.SESSION_SECRET || 'consentlens-dev-secret';
 
 function hashPassword(plain) {
   return bcrypt.hashSync(plain, 10);

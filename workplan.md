@@ -1,8 +1,8 @@
-# SPIDAC - Digital Tech Assurance Product Workplan
+# ConsentLens Product Workplan
 
 ## Product Direction
 
-Build SPIDAC - Digital Tech Assurance into an evidence-led privacy assurance platform for websites. The product should let a team define a visitor context and test plan, simulate realistic consent journeys, capture cookies and data flows, explain confidence and limitations, assign remediation, and prove improvement in later scans.
+Build ConsentLens into an evidence-led privacy assurance platform for websites. The product should let a team define a visitor context and test plan, simulate realistic consent journeys, capture cookies and data flows, explain confidence and limitations, assign remediation, and prove improvement in later scans.
 
 The product must distinguish:
 

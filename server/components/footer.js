@@ -18,9 +18,9 @@ function footer({ currentPage = 'home' } = {}) {
     <div class="site-footer-inner">
       <div class="site-footer-grid">
         <div class="site-footer-brand">
-          <a href="/" class="site-footer-brand-link" aria-label="SPIDAC home">
+          <a href="/" class="site-footer-brand-link" aria-label="ConsentLens home">
             <span class="site-footer-brand-mark" aria-hidden="true">🛡</span>
-            <span class="site-footer-brand-text">SPIDAC</span>
+            <span class="site-footer-brand-text">ConsentLens</span>
           </a>
           <p class="site-footer-brand-desc">
             Cookie compliance testing for modern teams.<br>
@@ -48,7 +48,7 @@ function footer({ currentPage = 'home' } = {}) {
 
       <div class="site-footer-bottom">
         <div class="site-footer-bottom-inner">
-          <p class="site-footer-copyright">&copy; ${new Date().getFullYear()} SPIDAC - Digital Tech Assurance. All rights reserved.</p>
+          <p class="site-footer-copyright">&copy; ${new Date().getFullYear()} ConsentLens. All rights reserved.</p>
           <p class="site-footer-note">Built for privacy. Nothing leaves your machine.</p>
         </div>
       </div>

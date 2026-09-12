@@ -15,7 +15,7 @@ async function fetchText(url, timeoutMs = 8000) {
     try {
       const req = mod.get(url, {
         timeout: timeoutMs,
-        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; SPIDAC-DTA/1.0)' },
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ConsentLens/1.0)' },
       }, res => {
         if (!res.statusCode || res.statusCode >= 400) { res.resume(); resolve(null); return; }
         const chunks = [];

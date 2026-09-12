@@ -48,9 +48,9 @@ function header({ user, currentPage = 'home' } = {}) {
 
   return `<header class="site-header" role="banner">
     <div class="site-header-inner">
-      <a href="/" class="site-header-brand" aria-label="SPIDAC home">
+      <a href="/" class="site-header-brand" aria-label="ConsentLens home">
         <span class="site-header-brand-mark" aria-hidden="true">🛡</span>
-        <span class="site-header-brand-text">SPIDAC</span>
+        <span class="site-header-brand-text">ConsentLens</span>
       </a>
 
       <nav class="site-header-nav" aria-label="Primary">

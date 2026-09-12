@@ -1,6 +1,6 @@
-# SPIDAC — Cookie & Consent Scanner
+# ConsentLens — Cookie & Consent Scanner
 
-**SPIDAC** (Digital Tech Assurance) is a privacy-engineering tool that simulates real visitor consent journeys, captures cookies and network activity, and generates evidence-backed reports aligned with UK GDPR/PECR and California CCPA/CPRA.
+**ConsentLens** is a privacy-engineering tool that simulates real visitor consent journeys, captures cookies and network activity, and generates evidence-backed reports aligned with UK GDPR/PECR and California CCPA/CPRA.
 
 ---
 
@@ -85,7 +85,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=yourpassword
-DB_NAME=spidac
+DB_NAME=consentlens
 
 # Session secret (generate a random string)
 SESSION_SECRET=change_me_to_something_random
@@ -106,7 +106,7 @@ APP_URL=http://localhost:3000
 The app creates tables automatically on first run. Just ensure the database named in `DB_NAME` exists:
 
 ```sql
-CREATE DATABASE spidac;
+CREATE DATABASE consentlens;
 ```
 
 ### 3. Start the server
@@ -221,7 +221,7 @@ const result = await runScan({
 
 ## Legal Disclaimer
 
-SPIDAC produces **technical observations**, not legal opinions. Findings indicate potential privacy risks and should be reviewed by a qualified privacy professional before drawing compliance conclusions. Geolocation emulation does not change the machine's IP address; sites that geo-fence by IP may not serve region-specific consent banners.
+ConsentLens produces **technical observations**, not legal opinions. Findings indicate potential privacy risks and should be reviewed by a qualified privacy professional before drawing compliance conclusions. Geolocation emulation does not change the machine's IP address; sites that geo-fence by IP may not serve region-specific consent banners.
 
 ---
 

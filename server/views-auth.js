@@ -32,7 +32,7 @@ function loginPage() {
     <div class="auth-card">
       <a class="auth-logo" href="/">
         <span class="auth-logo-mark">&#128737;</span>
-        SPIDAC
+        ConsentLens
       </a>
       <h1>Sign in</h1>
       <p class="auth-sub">Welcome back. Sign in to your workspace.</p>
@@ -63,7 +63,7 @@ function loginPage() {
     });
   })();
   </script>`;
-  return mpShell('Sign in', 'Sign in to your SPIDAC workspace.', body, null, authCss);
+  return mpShell('Sign in', 'Sign in to your ConsentLens workspace.', body, null, authCss);
 }
 
 function registerPage() {
@@ -72,7 +72,7 @@ function registerPage() {
     <div class="auth-card">
       <a class="auth-logo" href="/">
         <span class="auth-logo-mark">&#128737;</span>
-        SPIDAC
+        ConsentLens
       </a>
       <h1>Create account</h1>
       <p class="auth-sub">Get a private privacy-testing workspace. Free, no credit card needed.</p>
@@ -122,7 +122,7 @@ function registerPage() {
     });
   })();
   </script>`;
-  return mpShell('Create account', 'Create your free SPIDAC workspace.', body, null, authCss);
+  return mpShell('Create account', 'Create your free ConsentLens workspace.', body, null, authCss);
 }
 
 function verificationPendingPage() {

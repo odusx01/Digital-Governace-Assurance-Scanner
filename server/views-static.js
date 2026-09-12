@@ -52,7 +52,7 @@ function legalPage(slug, title, eyebrow, description, sections) {
     <div class="mp-inner">
       <div class="sp-eyebrow">${esc(eyebrow)}</div>
       <h1>${esc(title)}</h1>
-      <p class="legal-meta">Last updated: September 2026 &nbsp;·&nbsp; SPIDAC - Digital Tech Assurance</p>
+      <p class="legal-meta">Last updated: September 2026 &nbsp;·&nbsp; ConsentLens</p>
     </div>
   </section>
   <section class="legal-body">
@@ -72,7 +72,7 @@ function privacyPage() {
   const sections = [
     {
       heading: 'Who we are',
-      body: `<p>SPIDAC is operated by Digital Tech Assurance. We provide a web-based privacy assurance platform that simulates visitor consent journeys and produces technical evidence for compliance review.</p>
+      body: `<p>ConsentLens is operated by Digital Tech Assurance. We provide a web-based privacy assurance platform that simulates visitor consent journeys and produces technical evidence for compliance review.</p>
       <p>This policy explains what personal data we collect when you use the platform, how we use it, and your rights.</p>`,
     },
     {
@@ -141,7 +141,7 @@ function privacyPage() {
         <li><strong>Portability</strong> — receive your data in a structured, machine-readable format.</li>
         <li><strong>Object</strong> — object to processing based on legitimate interests.</li>
       </ul>
-      <p>To exercise any right, contact us at <a href="mailto:privacy@spidac.co.uk">privacy@spidac.co.uk</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO)</a>.</p>`,
+      <p>To exercise any right, contact us at <a href="mailto:privacy@consentlens.io">privacy@consentlens.io</a>. We will respond within 30 days. You also have the right to lodge a complaint with the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner's Office (ICO)</a>.</p>`,
     },
     {
       heading: 'Cookies on this website',
@@ -168,33 +168,33 @@ function privacyPage() {
           <div>
             <h3>Data controller</h3>
             <p>Digital Tech Assurance<br>
-            Email: <a href="mailto:privacy@spidac.co.uk">privacy@spidac.co.uk</a><br>
+            Email: <a href="mailto:privacy@consentlens.io">privacy@consentlens.io</a><br>
             For data subject requests, please include your name and the email address associated with your account.</p>
           </div>
         </div>
       </div>`,
     },
   ];
-  return legalPage('privacy', 'Privacy Policy', 'Legal', 'How SPIDAC collects, uses, and protects your personal data.', sections);
+  return legalPage('privacy', 'Privacy Policy', 'Legal', 'How ConsentLens collects, uses, and protects your personal data.', sections);
 }
 
 function termsPage() {
   const sections = [
     {
       heading: 'Acceptance of these terms',
-      body: `<p>By accessing or using SPIDAC ("the platform"), you agree to be bound by these Terms of Service. If you do not agree, you must not use the platform.</p>
-      <p>These terms form a binding agreement between you (or the organisation you represent) and Digital Tech Assurance, the operator of SPIDAC.</p>`,
+      body: `<p>By accessing or using ConsentLens ("the platform"), you agree to be bound by these Terms of Service. If you do not agree, you must not use the platform.</p>
+      <p>These terms form a binding agreement between you (or the organisation you represent) and Digital Tech Assurance, the operator of ConsentLens.</p>`,
     },
     {
       heading: 'Description of the service',
-      body: `<p>SPIDAC is a privacy assurance platform that simulates real browser consent journeys on websites you specify and produces technical evidence reports. The platform includes:</p>
+      body: `<p>ConsentLens is a privacy assurance platform that simulates real browser consent journeys on websites you specify and produces technical evidence reports. The platform includes:</p>
       <ul>
         <li>Automated consent journey scanning using a real browser engine</li>
         <li>Cookie classification, inventory, and severity-ranked findings</li>
         <li>Remediation tracking, scan comparison, and scheduled monitoring</li>
         <li>Evidence export, shared report links, and REST API access</li>
       </ul>
-      <div class="legal-warning"><strong>Not legal advice.</strong> SPIDAC produces technical observations and risk interpretation. It is not a substitute for legal advice. Results should be reviewed by a qualified DPO or solicitor in the context of your specific legal obligations.</div>`,
+      <div class="legal-warning"><strong>Not legal advice.</strong> ConsentLens produces technical observations and risk interpretation. It is not a substitute for legal advice. Results should be reviewed by a qualified DPO or solicitor in the context of your specific legal obligations.</div>`,
     },
     {
       heading: 'Accounts and access',
@@ -202,7 +202,7 @@ function termsPage() {
       <ul>
         <li>Maintaining the confidentiality of your login credentials</li>
         <li>All activity that occurs under your account</li>
-        <li>Notifying us immediately of any unauthorised access at <a href="mailto:security@spidac.co.uk">security@spidac.co.uk</a></li>
+        <li>Notifying us immediately of any unauthorised access at <a href="mailto:security@consentlens.io">security@consentlens.io</a></li>
       </ul>
       <p>We reserve the right to suspend or terminate accounts that violate these terms or that we reasonably believe are being used for harmful purposes.</p>`,
     },
@@ -267,21 +267,21 @@ function termsPage() {
           <div class="legal-contact-icon">&#9993;</div>
           <div>
             <h3>Digital Tech Assurance</h3>
-            <p>Email: <a href="mailto:legal@spidac.co.uk">legal@spidac.co.uk</a><br>
-            For support queries, please use <a href="mailto:support@spidac.co.uk">support@spidac.co.uk</a>.</p>
+            <p>Email: <a href="mailto:legal@consentlens.io">legal@consentlens.io</a><br>
+            For support queries, please use <a href="mailto:support@consentlens.io">support@consentlens.io</a>.</p>
           </div>
         </div>
       </div>`,
     },
   ];
-  return legalPage('terms', 'Terms of Service', 'Legal', 'The terms that govern your use of the SPIDAC platform.', sections);
+  return legalPage('terms', 'Terms of Service', 'Legal', 'The terms that govern your use of the ConsentLens platform.', sections);
 }
 
 function securityPage() {
   const sections = [
     {
       heading: 'Our approach to security',
-      body: `<p>Security is a core part of how SPIDAC is designed, not an afterthought. Because the platform handles scan data, credentials, and evidence reports, we apply defence-in-depth across every layer of the stack.</p>
+      body: `<p>Security is a core part of how ConsentLens is designed, not an afterthought. Because the platform handles scan data, credentials, and evidence reports, we apply defence-in-depth across every layer of the stack.</p>
       <div class="legal-highlight">If you discover a security vulnerability, please report it responsibly before public disclosure. We commit to responding within 72 hours and to crediting researchers who report valid issues.</div>`,
     },
     {
@@ -315,10 +315,10 @@ function securityPage() {
     },
     {
       heading: 'The scanning engine',
-      body: `<p>SPIDAC scans websites by launching a real Chromium browser via Playwright. Each scan runs in an isolated browser context with no persistent state between scans.</p>
+      body: `<p>ConsentLens scans websites by launching a real Chromium browser via Playwright. Each scan runs in an isolated browser context with no persistent state between scans.</p>
       <ul>
         <li>Browser processes run with reduced privileges and are terminated after scan completion.</li>
-        <li>Network requests made during scanning are observed, not modified — SPIDAC does not inject scripts into scanned websites.</li>
+        <li>Network requests made during scanning are observed, not modified — ConsentLens does not inject scripts into scanned websites.</li>
         <li>Scanned website content is never stored permanently; only the structured findings and metadata are saved.</li>
       </ul>`,
     },
@@ -336,9 +336,9 @@ function securityPage() {
     },
     {
       heading: 'Responsible disclosure',
-      body: `<p>We operate a responsible disclosure policy. If you believe you have found a security vulnerability in SPIDAC, please:</p>
+      body: `<p>We operate a responsible disclosure policy. If you believe you have found a security vulnerability in ConsentLens, please:</p>
       <ul>
-        <li>Email <a href="mailto:security@spidac.co.uk">security@spidac.co.uk</a> with a clear description of the issue</li>
+        <li>Email <a href="mailto:security@consentlens.io">security@consentlens.io</a> with a clear description of the issue</li>
         <li>Include steps to reproduce, potential impact, and any proof-of-concept</li>
         <li>Allow us reasonable time to investigate and remediate before public disclosure</li>
       </ul>
@@ -355,14 +355,14 @@ function securityPage() {
           <div class="legal-contact-icon">&#128274;</div>
           <div>
             <h3>Security team</h3>
-            <p>Email: <a href="mailto:security@spidac.co.uk">security@spidac.co.uk</a><br>
+            <p>Email: <a href="mailto:security@consentlens.io">security@consentlens.io</a><br>
             Please encrypt sensitive reports using PGP if possible. We aim to respond within 72 hours.</p>
           </div>
         </div>
       </div>`,
     },
   ];
-  return legalPage('security', 'Security', 'Security', 'How SPIDAC protects your data and the platform itself.', sections);
+  return legalPage('security', 'Security', 'Security', 'How ConsentLens protects your data and the platform itself.', sections);
 }
 
 function legalIndexPage() {
@@ -395,7 +395,7 @@ body{min-height:100vh;display:flex;flex-direction:column}
     <div class="mp-inner">
       <div class="sp-eyebrow">Legal</div>
       <h1>Legal &amp; compliance</h1>
-      <p>Everything you need to understand how SPIDAC works, what we do with your data, and how we keep the platform secure.</p>
+      <p>Everything you need to understand how ConsentLens works, what we do with your data, and how we keep the platform secure.</p>
     </div>
   </section>
   <section class="li-body">
@@ -427,23 +427,23 @@ body{min-height:100vh;display:flex;flex-direction:column}
         <div class="li-contact-item">
           <h3>Privacy &amp; data requests</h3>
           <p>For GDPR requests, data deletion, or questions about how we use your personal data.</p>
-          <p><a href="mailto:privacy@spidac.co.uk">privacy@spidac.co.uk</a></p>
+          <p><a href="mailto:privacy@consentlens.io">privacy@consentlens.io</a></p>
         </div>
         <div class="li-contact-item">
           <h3>Legal &amp; compliance</h3>
           <p>For terms of service queries, contractual matters, or compliance documentation requests.</p>
-          <p><a href="mailto:legal@spidac.co.uk">legal@spidac.co.uk</a></p>
+          <p><a href="mailto:legal@consentlens.io">legal@consentlens.io</a></p>
         </div>
         <div class="li-contact-item">
           <h3>Security vulnerabilities</h3>
           <p>To report a security issue or vulnerability responsibly before public disclosure.</p>
-          <p><a href="mailto:security@spidac.co.uk">security@spidac.co.uk</a></p>
+          <p><a href="mailto:security@consentlens.io">security@consentlens.io</a></p>
         </div>
       </div>
     </div>
   </section>`;
 
-  return mpShell('Legal', 'Privacy policy, terms of service, and security information for SPIDAC.', body, null, extraCss);
+  return mpShell('Legal', 'Privacy policy, terms of service, and security information for ConsentLens.', body, null, extraCss);
 }
 
 module.exports = { privacyPage, termsPage, securityPage, legalIndexPage };

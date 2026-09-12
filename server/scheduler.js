@@ -47,12 +47,12 @@ async function sendAlertEmail({ monitor, criticalCount, scanId }) {
     await transport.sendMail({
       from,
       to: monitor.recipients.join(', '),
-      subject: `[SPIDAC Alert] ${criticalCount} critical finding${criticalCount !== 1 ? 's' : ''} — ${monitor.name}`,
+      subject: `[ConsentLens Alert] ${criticalCount} critical finding${criticalCount !== 1 ? 's' : ''} — ${monitor.name}`,
       text: `Monitor: ${monitor.name}\nURL: ${monitor.url}\n\nA scheduled scan found ${criticalCount} critical finding${criticalCount !== 1 ? 's' : ''}, which meets or exceeds your alert threshold (${monitor.threshold_critical}).\n\nView report: ${reportLink}\n\nTo manage this monitor, log in at ${baseUrl}.`,
       html: `<p><strong>Monitor:</strong> ${monitor.name}<br><strong>URL:</strong> ${monitor.url}</p>
 <p>A scheduled scan found <strong>${criticalCount} critical finding${criticalCount !== 1 ? 's' : ''}</strong>, which meets or exceeds your alert threshold (${monitor.threshold_critical}).</p>
 <p><a href="${reportLink}" style="display:inline-block;padding:10px 16px;background:#dc2626;color:#fff;text-decoration:none;border-radius:6px;font-weight:700">View report</a></p>
-<p style="color:#64748b;font-size:12px">Sent by SPIDAC - Digital Tech Assurance scheduled monitor.</p>`,
+<p style="color:#64748b;font-size:12px">Sent by ConsentLens scheduled monitor.</p>`,
     });
   } catch (err) {
     console.error('[scheduler] Failed to send alert email:', err.message);
@@ -81,7 +81,7 @@ async function fireWebhook({ monitor, runStatus, criticalCount, highCount, findi
     await new Promise((resolve, reject) => {
       const req = lib.request(monitor.webhook_url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body), 'User-Agent': 'SPIDAC-Monitor/1.0' },
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body), 'User-Agent': 'ConsentLens-Monitor/1.0' },
         timeout: 10000,
       }, (res) => { res.resume(); resolve(); });
       req.on('error', reject);

@@ -2,7 +2,7 @@
 
 const mysql = require('mysql2/promise');
 
-const DB_NAME = process.env.DB_NAME || 'spidac_dta';
+const DB_NAME = process.env.DB_NAME || 'consentlens';
 const DB_USER = process.env.DB_USER || 'root';
 const DB_PASS = process.env.DB_PASS || '';
 const DB_HOST = process.env.DB_HOST || '127.0.0.1';
