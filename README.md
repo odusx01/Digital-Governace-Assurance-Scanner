@@ -4,6 +4,25 @@
 
 ---
 
+## Screenshots
+
+### Homepage
+![Homepage](docs/screenshots/01-homepage.png)
+
+### Dashboard
+![Dashboard](docs/screenshots/04-dashboard.png)
+
+### New Scan Wizard
+![New Scan](docs/screenshots/05-new-scan.png)
+
+### Reports
+![Reports](docs/screenshots/06-reports.png)
+
+### Frameworks
+![Frameworks](docs/screenshots/07-homepage-features.png)
+
+---
+
 ## Features
 
 - **Region-aware scanning** — emulates browser locale, timezone, and geolocation for 12 regions (UK, EU-DE, EU-FR, EU-ES, US, California, Canada, Australia, Brazil, India, South Africa, Japan)
