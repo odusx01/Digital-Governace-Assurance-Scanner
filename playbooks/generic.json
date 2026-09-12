@@ -1,0 +1,40 @@
+{
+  "cmp": "Generic",
+  "intro": "No named consent management platform was detected on this site, or a custom implementation is in use. Fixes will typically require a developer and, if third-party tags are managed via a tag manager like Google Tag Manager, a tag manager admin.",
+  "sections": [
+    {
+      "title": "Option A — Install a consent management platform",
+      "steps": [
+        "The most reliable path to compliance is to install a recognised CMP (OneTrust, Cookiebot, CookieYes, Usercentrics, or similar). These platforms handle the banner UI, consent record storage, and script blocking in one solution.",
+        "Choose a CMP that supports UK GDPR and PECR. Confirm it stores consent records with a timestamp and purpose, and blocks non-essential scripts before consent.",
+        "After installation, configure each cookie category and map your third-party scripts to the appropriate categories."
+      ]
+    },
+    {
+      "title": "Option B — Gate scripts manually via Google Tag Manager",
+      "steps": [
+        "If you use Google Tag Manager, enable Google Consent Mode v2 in your GTM container.",
+        "Add a consent initialisation tag that sets default denied states: analytics_storage=denied, ad_storage=denied, functionality_storage=denied. This tag must fire before all other tags.",
+        "Your cookie banner must update these signals when the user accepts or rejects. Each GTM tag must have a 'Consent Check' trigger that requires the relevant signal to be 'granted' before firing.",
+        "Never use 'Page View' as the only trigger for analytics or advertising tags — this fires before consent is given."
+      ]
+    },
+    {
+      "title": "Option C — Block scripts directly in site code",
+      "steps": [
+        "For sites without a tag manager: change non-essential script tags from <script src='...'> to <script type='text/plain' data-category='analytics' src='...'>.",
+        "After the user consents, your consent handler must dynamically re-create the script tags with type='text/javascript' for the accepted categories.",
+        "Store the consent choice in a first-party cookie (e.g. cookies_policy='{\"analytics\":true,\"advertising\":false}'). On subsequent page loads, read this cookie and activate the appropriate scripts.",
+        "Ensure the stored consent record is checked before any non-essential code runs — not just on the page where the banner appears."
+      ]
+    },
+    {
+      "title": "Confirm the banner meets first-layer parity",
+      "steps": [
+        "The banner's first visible layer must give equal prominence to 'Accept' and 'Reject'. If your banner shows 'Accept all' with a large button but only a small text link for 'Manage preferences', this does not meet ICO guidance.",
+        "Add a 'Reject all' button to the first layer. It should be the same visual size and contrast as 'Accept all'.",
+        "Do not pre-tick checkboxes in a preference centre. All non-essential categories must default to off."
+      ]
+    }
+  ]
+}

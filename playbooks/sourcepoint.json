@@ -1,0 +1,40 @@
+{
+  "cmp": "Sourcepoint",
+  "intro": "Sourcepoint is an enterprise consent management platform. Configuration is done through the Sourcepoint portal (sourcepointstrategies.com or your branded instance). Changes to consent logic and vendor lists require republishing a campaign; changes to which tags fire require updates to your tag manager or server-side implementation.",
+  "sections": [
+    {
+      "title": "Audit the vendor list and consent purposes",
+      "steps": [
+        "Log in to the Sourcepoint portal and open your property.",
+        "Go to Campaigns → Vendor List. Review every vendor and confirm each is assigned the correct purpose (Analytics, Personalisation, etc.).",
+        "Cross-reference vendors against the cookies named in the CRITICAL findings. Any vendor whose cookies appear in the no-interaction or reject-all scenarios must be gated on explicit consent."
+      ]
+    },
+    {
+      "title": "Block tags until consent is given",
+      "steps": [
+        "In Google Tag Manager (or your tag manager), ensure every non-essential tag has a trigger that checks Sourcepoint's consent API before firing.",
+        "Sourcepoint provides a JavaScript API: window._sp_.executeMessaging() and consent callbacks. Your tags should listen for the consent callback and check the granted purposes before activating.",
+        "For Google tags: enable Google Consent Mode v2 and map Sourcepoint's purposes to the consent signals (analytics_storage, ad_storage, etc.). Google tags will self-restrict when signals are denied.",
+        "Test by loading the page in a fresh browser with the network inspector open. No analytics or advertising requests should fire before the consent banner is interacted with."
+      ]
+    },
+    {
+      "title": "Investigate cookies set in response to rejection",
+      "steps": [
+        "The scan detected cookies being set specifically when the user clicked 'Reject'. This usually means a tag is listening to the consent event and firing on any consent interaction — including rejection.",
+        "In your tag manager, search for tags triggered by custom events related to Sourcepoint (e.g., 'sp.consentReady', 'sp.consentChange'). Any tag using such a trigger must check whether consent was actually granted, not just that an event fired.",
+        "Remove or correct any tag that fires unconditionally on the consent event."
+      ]
+    },
+    {
+      "title": "Verify the fix",
+      "steps": [
+        "Republish your Sourcepoint campaign.",
+        "Load the site in a fresh private window. Before clicking anything, open DevTools → Application → Cookies. Only strictly-necessary cookies should be present.",
+        "Click 'Reject' and confirm no new non-essential cookies appear.",
+        "Run the cookie scanner. No CRITICAL findings should remain."
+      ]
+    }
+  ]
+}

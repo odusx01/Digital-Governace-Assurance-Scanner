@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Environment variables (never commit credentials)
+.env
+.env.*
+!.env.example
+
+# Scan results and generated reports
+results/
+scan-result.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# VS Code AI instructions
+.github/instructions/codacy.instructions.md
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Screenshots captured during scans
+screenshot.png

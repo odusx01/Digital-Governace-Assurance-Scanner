@@ -1,0 +1,31 @@
+{
+  "cmp": "Cookiebot",
+  "intro": "Cookiebot (by Usercentrics) works by scanning your site for cookies and auto-blocking scripts. Configuration is done in the Cookiebot Manager at manage.cookiebot.com. After making changes, trigger a new cookie scan from the dashboard and re-embed the updated script on your site.",
+  "sections": [
+    {
+      "title": "Classify unrecognised cookies",
+      "steps": [
+        "Log in to manage.cookiebot.com and open your domain.",
+        "Go to the Cookie tab. Any cookies marked as 'Unclassified' correspond to cookies flagged as REVIEW in this report.",
+        "For each unclassified cookie, review the purpose and assign the correct category (Necessary, Preferences, Statistics, or Marketing). Do not leave revenue-generating or analytics cookies as Necessary unless they genuinely are."
+      ]
+    },
+    {
+      "title": "Enable auto-blocking for non-essential scripts",
+      "steps": [
+        "In the Cookiebot Manager, go to Settings → Auto-blocking.",
+        "Ensure auto-blocking is enabled. Cookiebot will rewrite script tags on your page to prevent them firing until the relevant consent category is accepted.",
+        "If you use Google Tag Manager, add Cookiebot's GTM template from the Community Template Gallery, or manually add consent checks to each tag using Cookiebot's dataLayer events.",
+        "Verify auto-blocking is working: visit your site in a fresh private window and check that Google Analytics, Facebook Pixel, and similar tags do not appear in the Network tab before you click 'Allow'."
+      ]
+    },
+    {
+      "title": "Confirm the banner shows Reject on the first layer",
+      "steps": [
+        "In the Cookiebot Manager, go to Dialog and review the button configuration.",
+        "Ensure a 'Decline' or 'Reject' button is visible on the first-layer banner with equal prominence to 'Allow cookies'.",
+        "If your banner only shows 'Allow cookies' and 'Customise', this creates an asymmetry that may not meet ICO guidance. Add a direct decline option."
+      ]
+    }
+  ]
+}

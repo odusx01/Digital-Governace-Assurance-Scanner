@@ -1,0 +1,42 @@
+{
+  "cmp": "OneTrust",
+  "intro": "OneTrust is a consent management platform configured through a web-based admin console. Changes take effect when you republish the script — no developer deployment is usually required for category-level fixes, though blocking third-party tags requires a change to your tag manager or site code.",
+  "sections": [
+    {
+      "title": "Audit which cookies are assigned to which category",
+      "steps": [
+        "Log in to your OneTrust account at app.onetrust.com.",
+        "Navigate to Websites → Categorisation (or Cookie Compliance → Cookies).",
+        "Search for each cookie named in the CRITICAL findings. Verify it is assigned to the correct category (e.g. Analytics, Targeting). If it is uncategorised, assign it now.",
+        "For cookies set by third-party vendors (Google Analytics, Meta, etc.), check whether the vendor's script is blocked until the corresponding category is accepted."
+      ]
+    },
+    {
+      "title": "Ensure scripts are blocked before consent",
+      "steps": [
+        "In OneTrust, go to Websites → Scripts. Each script entry should be mapped to a cookie category.",
+        "Enable 'Script Blocking' for all non-essential vendor scripts. OneTrust wraps the script tags so they fire only after consent.",
+        "Alternatively, if tags are managed via Google Tag Manager: add an OneTrust Consent Mode variable and use it as a trigger condition on each tag. Tags must NOT fire when the consent state is unknown or denied.",
+        "Deploy the updated script (republish in OneTrust and verify the new version loads on your site)."
+      ]
+    },
+    {
+      "title": "Add a 'Reject All' button to the first-layer banner",
+      "steps": [
+        "In OneTrust, go to Preference Center → Banner.",
+        "Under Button Configuration, add a second primary button. Label it 'Reject all' and set its action to 'Reject All'.",
+        "Ensure the button has equal visual weight to 'Accept all' — same size, same contrast, same layer. Do not hide it inside a 'More options' link.",
+        "Republish and test: visiting the site in a fresh private window should show both 'Accept all' and 'Reject all' on the first visible banner."
+      ]
+    },
+    {
+      "title": "Verify the fix with a re-scan",
+      "steps": [
+        "After republishing, run the cookie scanner again against the same URL.",
+        "Confirm: no-interaction scenario sets zero non-essential cookies.",
+        "Confirm: reject-all scenario shows only strictly-necessary cookies.",
+        "Confirm: both accept-all and reject-all complete in a single click from the first-layer banner."
+      ]
+    }
+  ]
+}

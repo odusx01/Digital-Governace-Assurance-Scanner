@@ -1,0 +1,30 @@
+{
+  "cmp": "CookieYes",
+  "intro": "CookieYes is a consent management platform configured via app.cookieyes.com. It injects a banner script and optionally blocks other scripts. Changes are applied by republishing; no developer deployment is needed for banner or category changes.",
+  "sections": [
+    {
+      "title": "Review cookie categories",
+      "steps": [
+        "Log in to app.cookieyes.com and open your site.",
+        "Go to Cookies → Cookie List. Check that every cookie in the CRITICAL findings is assigned to the correct non-necessary category (Analytics, Advertisement, Functional, or Performance). Miscategorised cookies will not be blocked correctly.",
+        "Enable 'Block cookies before consent' if not already enabled (Settings → Cookie Blocking)."
+      ]
+    },
+    {
+      "title": "Enable script blocking",
+      "steps": [
+        "In CookieYes, go to Settings → Script Manager. Add the scripts responsible for setting non-essential cookies and map them to the correct category.",
+        "For Google Analytics: the GA script should be categorised as Analytics. CookieYes will prevent it loading until the user accepts analytics cookies.",
+        "If you use Google Tag Manager, install the CookieYes GTM integration and use CookieYes consent variables as tag triggers."
+      ]
+    },
+    {
+      "title": "Add a Reject button to the first layer",
+      "steps": [
+        "In the CookieYes dashboard, go to Customise → Buttons.",
+        "Add a 'Reject' button alongside 'Accept'. Ensure it is on the same visible layer as 'Accept' with equal visual prominence.",
+        "Republish and verify in a fresh private browser window."
+      ]
+    }
+  ]
+}

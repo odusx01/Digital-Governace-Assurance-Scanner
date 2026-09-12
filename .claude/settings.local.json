@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(node -e \"require\\(''''./scan.js''''\\)\")",
+      "Bash(for site:*)",
+      "Bash(do node:*)",
+      "Bash(echo \"done: $site\")",
+      "Bash(done)",
+      "Bash(npm install:*)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(PLAYWRIGHT_BROWSERS_PATH=D:/playwright-browsers npx playwright install chromium)",
+      "Bash(node -e \"require\\(''''./server/index.js''''\\)\")",
+      "Bash(wc -l /c/Users/HP/dev/cookie-scanner/*.js /c/Users/HP/dev/cookie-scanner/server/*.js)",
+      "Bash(wc -l /c/Users/HP/dev/cookie-scanner/*.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(echo 'not found' ls *.js server/*.jse a pop up page)",
+      "Bash(node -e \"require\\(''./server/views.js''\\)\")",
+      "Bash(node -e \"require\\(''''./report.js''''\\)\")",
+      "Bash(node -e \"require\\(''''./server/views.js''''\\)\")",
+      "Bash(node -e \"require\\(''''./server/db.js''''\\)\")",
+      "Bash(grep:*)",
+      "Bash(git --version)"
+    ]
+  }
+}
